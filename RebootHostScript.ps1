@@ -1,5 +1,5 @@
 Import-Module FailoverClusters
-$clusters = get-cluster -Domain pmt.primetals.net | Where-Object {($_.Name -like 'node2*') -or ($_.Name -like 'node1*')}
+$clusters = get-cluster -Domain domain.com | Where-Object {($_.Name -like 'node2*') -or ($_.Name -like 'node1*')}
 
 $RebootCluster = {
     [CmdletBinding()]
