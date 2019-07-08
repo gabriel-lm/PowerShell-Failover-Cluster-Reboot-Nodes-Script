@@ -1,4 +1,5 @@
 Import-Module FailoverClusters
+#I used this to filter the clusters in the domain, since not all needed to be rebooted
 $clusters = get-cluster -Domain domain.com | Where-Object {($_.Name -like 'node2*') -or ($_.Name -like 'node1*')}
 
 $RebootCluster = {
